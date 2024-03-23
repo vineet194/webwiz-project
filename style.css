@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: SFUIHeavy;
+    color: var(--main-color)
+}
+
+:root{
+    --main-bg-color: #0B0C10;
+    --sec-bg-color: #1F2833;
+    --main-color: #66FCF1;
+    --main-color-dark: #45A29E;
+    --sec-color: #C5C6C7;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-stop: always;
+}
+
+@font-face{
+    font-family: SFUIHeavy;
+    src: url("./content/SFUIText-Heavy.ttf");
+}
+@font-face{
+    font-family: SFUILight;
+    src: url("./content/SFUIText-Light.ttf")
+}
+
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.center-items{
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    height: 10vh;
+    flex: 0, 0, auto;
+}
+
+/* .home{
+
+} */
+
+nav{
+    width: 100%;
+    margin: 25px;
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    border-radius: 25px;
+    justify-content: space-between;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+
+nav > ul{
+    gap: 75px;
+}
+
+.logo{
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.bg-overlay{
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #060b11;
+    background-repeat: repeat;
+    opacity: 0.75;
+}
+
+body{
+    z-index: -2;
+    background-image: url("./content/dust-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+
+/* HOME */
+
+main.home{
+    height: 90vh;
+    flex: 1;
+}
+.sec1 > .container{
+    padding: 100px 0px 0px 300px;
+}
+
+.header-text{
+    font-size: 7rem;
+}
+.secondary-header-text{
+    font-size: 5rem;
+}
+.summary-text{
+    width: 50%;
+    font-family: SFUILight;
+    color: var(--sec-color);
+    line-height: 1.5em;
+}
+
+#contact-me{
+    height: 50px;
+    width: 300px;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 25px 0px;
+    transition: 0.5s;
+}
+
+#contact-me:hover{
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+    transition: 0.5s;
+}
+
+/* .sec1{
+    
+} */
+
+.sec2{
+    flex: 1;
+}
+
+
+.sec3{
+    height: 100%;
+    width: 80%;
+}
+
+.sec3 > .container{
+    gap: 25px;
+}
+
+.projects{
+    height: 100vh;
+}
+
+.project-card{
+    width: 30%;
+    max-height: 85%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 25px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.project-card > a{
+    justify-content: space-evenly;
+}
+
+.project-card-text{
+    margin: 5px;
+}
+
+.project-card-text > p{
+    color: var(--sec-color);
+    font-family: SFUILight;
+}
+
+.project-card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+.project-card:hover > .project-card-text > p{
+    color: var(--main-color-dark);
+    transition: 0.1s;
+}
+
+.project-card > a{
+    gap: 20px;
+}
+
+.project-card-img{
+    height: 60%;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.project-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contact{
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+.sm-icons{
+    margin-top: 50px;
+    gap: 25px;
+}
+
+.sm-icons > a > img{
+    height: 40px;
+    width: 40px;
+}
+
+.email-div{
+    margin-top: 10px;
+}
+
+.email{
+    width: 50%;
+    font-family: SFUILight;
+    color: var(--sec-color);
+    line-height: 1.5em;
+}
+
+.email[hover]{
+    text-decoration: underline;
+}
+
+
+
+
+
+ul{
+    list-style: none;
+}
+
+nav a{
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.nav-legend > li > *:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+}
